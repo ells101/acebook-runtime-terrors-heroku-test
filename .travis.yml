@@ -8,3 +8,11 @@ script:
  — bundle install && bin/rails db:create && bin/rails db:migrate
 services:
  — postgresql
+
+ deploy:
+  provider: heroku
+  api_key:
+    secure: KEY
+  app: acebook-runtime-terrors-test
+  on:
+    repo: ells101/runtime-terrors-heroku-test
